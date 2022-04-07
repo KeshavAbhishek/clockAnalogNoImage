@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="node.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <div id="circularFrame">
+            <div id="frame-12-6" class="time">
+                <span style="transform: rotate(-90deg);color: palegreen;">12</span>
+                <span style="transform: rotate(-90deg);color: palegreen;">6</span>
+            </div>
+            <div id="frame-9-3" class="time">
+                <span style="color: palegreen;">9</span>
+                <span style="color: palegreen;">3</span>
+            </div>
+            <div id="frame-10-4" class="time">
+                <span>10</span>
+                <span>4</span>
+            </div>
+            <div id="frame-11-5" class="time">
+                <span>11</span>
+                <span>5</span>
+            </div>
+            <div id="frame-7-1" class="time">
+                <span>7</span>
+                <span>1</span>
+            </div>
+            <div id="frame-8-2" class="time">
+                <span>8</span>
+                <span>2</span>
+            </div>
+            <div id="secondHand"></div>
+            <div id="minuteHand"></div>
+            <div id="hourHand"></div>
+            <div id="center"></div>
+        </div>
+        <div id="digitalClock">
+            <span style="color: red;">12</span> : <span style="color: yellow;">00</span> : <span style="color: palegreen;">00</span> <span style="color: white;"></span>
+        </div>
+    </div>
+</body>
+</html>
