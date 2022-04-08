@@ -18,7 +18,12 @@ setInterval(() => {
         document.getElementById('hourHand').style.transition='all 1s ease-in-out';
 
         if(currTime.getHours()<10){
-            document.querySelector('#digitalClock span:nth-child(1)').innerHTML=`0${currTime.getHours()}`;
+            if(currTime.getHours()===0){
+                document.querySelector('#digitalClock span:nth-child(1)').innerHTML=`12`;
+            }
+            else{
+                document.querySelector('#digitalClock span:nth-child(1)').innerHTML=`0${currTime.getHours()}`;
+            }
         }
         else{
             document.querySelector('#digitalClock span:nth-child(1)').innerHTML=`${currTime.getHours()}`;
