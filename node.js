@@ -59,7 +59,3 @@ setInterval(() => {
         document.querySelector('#digitalClock span:nth-child(2)').innerHTML=`${currTime.getMinutes()}`;
     }
 }, 1000);
-
-// setTimeout(() => {
-//     if(window.innerWidth<=700){document.getElementById('circularFrame').style.background=`url('https://picsum.photos/${parseInt(window.innerWidth*0.7)}')`;}
-// }, 60000);
