@@ -1,19 +1,3 @@
-if(window.innerWidth<=700){
-    document.getElementById('circularFrame').style.backgroundImage=`url('https://picsum.photos/${parseInt(window.innerWidth*0.7)}')`;
-}
-else{
-    document.getElementById('circularFrame').style.backgroundImage=`url('https://picsum.photos/${parseInt(window.innerWidth*0.3)}')`;
-}
-
-window.addEventListener('resize',()=>{
-    if(window.innerWidth<=699){
-        document.getElementById('circularFrame').style.backgroundImage=`url('https://picsum.photos/${parseInt(window.innerWidth*0.7)}')`;
-    }
-    else{
-        document.getElementById('circularFrame').style.backgroundImage=`url('https://picsum.photos/${parseInt(window.innerWidth*0.3)}')`;
-    }
-})
-
 setInterval(() => {
     var currTime = new Date()
     currentTicks = Math.floor(currTime.getMinutes()/12);
@@ -62,24 +46,3 @@ setInterval(() => {
         document.querySelector('#digitalClock span:nth-child(2)').innerHTML=`${currTime.getMinutes()}`;
     }
 }, 1000);
-
-var changeTheme = "DAY";
-
-document.getElementById('themeFrame').addEventListener('click',()=>{
-    if(changeTheme=="DAY"){
-        document.querySelector('#themeFrame div').classList.add('moveY')
-        document.querySelector('#themeFrame div').classList.remove('moveYOpp')
-        document.getElementById('container').classList.add('changeMainBg');
-        document.getElementById('container').classList.remove('changeMainBgBack');
-        document.getElementById('digitalClock').classList.add('digitalClockChange');
-        changeTheme = "NIGHT"
-    }
-    else{
-        document.querySelector('#themeFrame div').classList.remove('moveY')
-        document.querySelector('#themeFrame div').classList.add('moveYOpp')
-        document.getElementById('container').classList.remove('changeMainBg');
-        document.getElementById('container').classList.add('changeMainBgBack');
-        document.getElementById('digitalClock').classList.remove('digitalClockChange');
-        changeTheme = "DAY"
-    }
-});
