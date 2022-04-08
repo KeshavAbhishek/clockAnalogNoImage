@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analog Clock</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/477be79e6e.js" crossorigin="anonymous"></script>
     <script src="node.js" defer></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js' defer></script>
 </head>
 <body>
     <div id="container">
-        <div id="circularFrame">
+        <div id="circularFrame" data-tilt>
             <div id="frame-12-6" class="time">
                 <span style="transform: rotate(-90deg);color: palegreen;">12</span>
                 <span style="transform: rotate(-90deg);color: palegreen;">6</span>
@@ -40,8 +42,14 @@
             <div id="hourHand"></div>
             <div id="center"></div>
         </div>
-        <div id="digitalClock" onclick="document.location.reload()">
+        <div id="digitalClock" onclick="document.location.reload()" data-tilt>
             <span style="color: red;">00</span> : <span style="color: yellow;">00</span> : <span style="color: palegreen;">00</span> <span style="color: white;"></span>
+        </div>
+        <div id="themeFrame" style="position: absolute;top: 5%;right: 4%;">
+            <div>
+                <i class="fa-solid fa-sun icons" id="sun"></i>
+                <i class="fa-solid fa-moon icons" id="moon"></i>
+            </div>
         </div>
     </div>
 </body>

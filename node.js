@@ -24,6 +24,9 @@ setInterval(() => {
         if(currTime.getHours()-12<10){
             document.querySelector('#digitalClock span:nth-child(1)').innerHTML=`0${currTime.getHours()-12}`;
         }
+        else{
+            document.querySelector('#digitalClock span:nth-child(1)').innerHTML=`${currTime.getHours()-12}`;
+        }
         // document.querySelector('#digitalClock span:nth-child(4)').innerHTML='PM';
     }
     else{
@@ -59,3 +62,24 @@ setInterval(() => {
         document.querySelector('#digitalClock span:nth-child(2)').innerHTML=`${currTime.getMinutes()}`;
     }
 }, 1000);
+
+var changeTheme = "DAY";
+
+document.getElementById('themeFrame').addEventListener('click',()=>{
+    if(changeTheme=="DAY"){
+        document.querySelector('#themeFrame div').classList.add('moveY')
+        document.querySelector('#themeFrame div').classList.remove('moveYOpp')
+        document.getElementById('container').classList.add('changeMainBg');
+        document.getElementById('container').classList.remove('changeMainBgBack');
+        document.getElementById('digitalClock').classList.add('digitalClockChange');
+        changeTheme = "NIGHT"
+    }
+    else{
+        document.querySelector('#themeFrame div').classList.remove('moveY')
+        document.querySelector('#themeFrame div').classList.add('moveYOpp')
+        document.getElementById('container').classList.remove('changeMainBg');
+        document.getElementById('container').classList.add('changeMainBgBack');
+        document.getElementById('digitalClock').classList.remove('digitalClockChange');
+        changeTheme = "DAY"
+    }
+});

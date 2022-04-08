@@ -14,6 +14,7 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
+    position: relative;
 }
 
 #circularFrame{
@@ -102,4 +103,51 @@
 
 #digitalClock:active{
     filter: invert(50%);
+}
+
+.changeMainBg{
+    background: whitesmoke !important;
+    transition: background 0.5s ease;
+}
+.changeMainBgBack{
+    background: rgba(0, 0, 0, 0.85) !important;
+    transition: background 0.5s ease;
+}
+
+.digitalClockChange{
+    color: #000 !important;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.9), -4px -4px 5px rgba(0, 0, 0, 0.9), 4px -4px 5px rgba(0, 0, 0, 0.9), -4px 4px 5px rgba(0, 0, 0, 0.9) !important;
+}
+.digitalClockChange span{
+    color: #000 !important;
+}
+
+#sun,#moon{
+    font-size: 3pc;
+    cursor: pointer;
+}
+
+#moon{
+    color: rgba(0, 0, 0, 0.85) !important;
+}
+
+#themeFrame{
+    width: 50.875px;
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+/* #themeFrame div{
+    transform: translateY(-50%);
+    transition: transform 1s ease;
+} */
+
+.moveY{
+    transform: translateY(-50%);
+    transition: transform 0.5s ease;
+}
+
+.moveYOpp{
+    transform: translateY(0%);
+    transition: transform 0.5s ease;
 }
