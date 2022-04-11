@@ -10,11 +10,11 @@
     <script src="timeUpdater.js" defer></script>
     <script src="themeChange.js" defer></script>
     <script src="clockBackground.js" defer></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js' defer></script>
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js' defer></script> -->
 </head>
 <body>
     <div id="container">
-        <div id="circularFrame" data-tilt>
+        <div id="circularFrame">
             <div id="frame-12-6" class="time">
                 <span style="transform: rotate(-90deg);color: palegreen;">12</span>
                 <span style="transform: rotate(-90deg);color: palegreen;">6</span>
@@ -44,7 +44,7 @@
             <div id="hourHand"></div>
             <div id="center"></div>
         </div>
-        <div id="digitalClock" onclick="document.location.reload()" data-tilt>
+        <div id="digitalClock" onclick="document.location.reload()">
             <span style="color: red;">00</span> : <span style="color: yellow;">00</span> : <span style="color: palegreen;">00</span> <span style="color: white;"></span>
         </div>
         <div id="themeFrame" style="position: absolute;top: 5%;right: 4%;">

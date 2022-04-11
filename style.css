@@ -16,8 +16,17 @@
     flex-direction: column;
 }
 
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 #circularFrame{
-    /* border: 5px solid rgba(255, 255, 255, 0.2); */
+    border: 5px solid whitesmoke;
     width: 30vw;
     /* width: 70vw; */
     aspect-ratio: 1;
@@ -34,13 +43,16 @@
 }
 
 #circularFrame .time{
-    width: 100%;
+    width: 93%;
     /* border: 1px solid white; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: absolute;
-    padding: 0 2.5%;
+    /* padding: 0 4.5%; */
+}
+
+#circularFrame .time span{
     font-size: 1.5pc;
 }
 
@@ -64,7 +76,7 @@
 }
 
 #secondHand{
-    width: 40%;
+    width: 32%;
     height: 2.5px;
     background: palegreen;
     position: absolute;
@@ -72,7 +84,7 @@
     transform-origin: 0;
 }
 #minuteHand{
-    width: 38%;
+    width: 27%;
     height: 2.5px;
     background: yellow;
     position: absolute;
@@ -80,7 +92,7 @@
     transform-origin: 0;
 }
 #hourHand{
-    width: 33%;
+    width: 20%;
     height: 2.5px;
     background: red;
     position: absolute;
@@ -149,4 +161,35 @@
 .moveYOpp{
     transform: translateY(0%);
     transition: transform 0.5s ease;
+}
+
+#circularFrame .time span:hover{
+    color: red;
+    cursor: pointer;
+    font-size: 3pc;
+    font-weight: bolder;
+    animation: fonts 0.2s ease;
+}
+
+#circularFrame .time span:not(:hover){
+    animation: fontback 0.2s ease;
+}
+
+@keyframes fonts {
+    0%{
+        font-size: 1.5pc;
+    }
+    100%{
+        font-size: 3pc;
+        font-weight: bolder;
+    }
+}
+@keyframes fontback {
+    0%{
+        font-size: 3pc;
+    }
+    100%{
+        font-size: 1.5pc;
+        font-weight: bolder;
+    }
 }
