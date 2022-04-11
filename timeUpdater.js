@@ -70,7 +70,19 @@ setInterval(() => {
 
     document.getElementById('secondHand').style.transform=`rotate(-90deg) rotate(${(currTime.getSeconds()/60)*360}deg)`;
 
-    document.querySelector('#digitalClock span:nth-child(1)').innerHTML=`${currTime.toTimeString().split(' ')[0].split(':')[0]}`;
+    if(currTime.getHours()>12){
+        document.querySelector('#digitalClock span:nth-child(1)').innerHTML=`${currTime.getHours()-12}`;
+    }
+    else{
+        if(currTime.getHours()<10){
+            document.querySelector('#digitalClock span:nth-child(1)').innerHTML=`0${currTime.getHours()}`;
+        }
+        else{
+        document.querySelector('#digitalClock span:nth-child(1)').innerHTML=`${currTime.getHours()}`;
+        }
+    }
+
+    // document.querySelector('#digitalClock span:nth-child(1)').innerHTML=`${currTime.toTimeString().split(' ')[0].split(':')[0]}`;
     document.querySelector('#digitalClock span:nth-child(2)').innerHTML=`${currTime.toTimeString().split(' ')[0].split(':')[1]}`;
     document.querySelector('#digitalClock span:nth-child(3)').innerHTML=`${currTime.toTimeString().split(' ')[0].split(':')[2]}`;
 
