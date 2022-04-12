@@ -38,6 +38,8 @@
     overflow: hidden;
     position: relative;
     -webkit-user-drag: none;
+    background: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
 }
 
 #circularFrame .time{
@@ -161,33 +163,8 @@
     transition: transform 0.5s ease;
 }
 
-#circularFrame .time span:hover{
-    color: red;
-    cursor: pointer;
-    font-size: 3pc;
+.hourHandOn{
+    color: red !important;
+    font-size: 3pc !important;
     font-weight: bolder;
-    animation: fonts 0.2s ease;
-}
-
-#circularFrame .time span:not(:hover){
-    animation: fontback 0.2s ease;
-}
-
-@keyframes fonts {
-    0%{
-        font-size: 1.5pc;
-    }
-    100%{
-        font-size: 3pc;
-        font-weight: bolder;
-    }
-}
-@keyframes fontback {
-    0%{
-        font-size: 3pc;
-    }
-    100%{
-        font-size: 1.5pc;
-        font-weight: bolder;
-    }
 }
