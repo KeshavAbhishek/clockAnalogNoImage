@@ -38,8 +38,6 @@
     overflow: hidden;
     position: relative;
     -webkit-user-drag: none;
-    background: rgba(0, 0, 0, 0.6);
-    background-blend-mode: multiply;
 }
 
 #circularFrame .time{
