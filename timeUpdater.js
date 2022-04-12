@@ -26,8 +26,6 @@ setInterval(() => {
     else{
         if(currTime.getHours()<10){
             document.querySelector('#digitalClock span:nth-child(1)').innerHTML=`0${currTime.getHours()}`;
-            // document.getElementById(timeStamps[currTime.getHours()-1]).classList.remove('hourHandOn');
-            // document.getElementById(timeStamps[currTime.getHours()]).classList.add('hourHandOn');
             if(currTime.getHours()>=1){
                 document.getElementById(timeStamps[currTime.getHours()-1]).classList.remove('hourHandOn');
                 document.getElementById(timeStamps[currTime.getHours()]).classList.add('hourHandOn');
@@ -43,9 +41,8 @@ setInterval(() => {
         document.getElementById(timeStamps[currTime.getHours()-1]).classList.remove('hourHandOn');
         document.getElementById(timeStamps[currTime.getHours()]).classList.add('hourHandOn');
         }
-    }
+    };
 
-    // document.querySelector('#digitalClock span:nth-child(1)').innerHTML=`${currTime.toTimeString().split(' ')[0].split(':')[0]}`;
     document.querySelector('#digitalClock span:nth-child(2)').innerHTML=`${currTime.toTimeString().split(' ')[0].split(':')[1]}`;
     document.querySelector('#digitalClock span:nth-child(3)').innerHTML=`${currTime.toTimeString().split(' ')[0].split(':')[2]}`;
 
@@ -56,16 +53,3 @@ setInterval(() => {
         document.querySelector('#digitalClock span:nth-child(4)').innerHTML='AM';
     }
 }, 1000);
-
-// time12
-// time6
-// time9
-// time3
-// time10
-// time4
-// time11
-// time5
-// time7
-// time1
-// time8
-// time2
